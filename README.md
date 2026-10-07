@@ -4,10 +4,10 @@ Source and a ready-built `dist` folder for https://pondviewpb.com. The site uses
 
 ## Pages
 
-- `/` — compact homepage with the main scheduling link and page cards.
+- `/` — compact homepage with the main scheduling link, page cards, Our Story, and the supplied Pondview banner.
 - `/play/` — court rentals, open play, lessons and coaching.
-- `/coach/` — Coach Byron, RPO training photos, and certificate opening in a new tab.
-- `/facility/` — amenities, FAQs including lockers, and an Iba area map. The map is not an exact court pin.
+- `/coach/` — Coach Byron’s college table tennis background, new RPO training photo, matching-width class photo, and certificate opening in a new tab.
+- `/facility/` — amenities, FAQs including lockers and the USA Pickleball skill matrix, and the exact court map at 15.371219, 119.955327 (9XC4+G7V, Iba, Zambales).
 - `/about/` — our story.
 - `/contact/` — inquiry form.
 - `/code-of-conduct/` — club rules, with Safety first given priority.
@@ -17,7 +17,7 @@ Header sections use internal page links. Facebook, Reclub, the certificate, and 
 
 ## Contact form: one-time activation required
 
-The Submit button sends the form to FormSubmit for email delivery to `contact@pondviewpb.com`. It does not open the visitor's email app. `support@pondviewpb.com` stays in the footer as the general support address.
+The Submit button sends the form to FormSubmit for email delivery to `contact@pondviewpb.com`. It does not open the visitor's email app. The mail icon in the footer links to `support@pondviewpb.com` as the general support address.
 
 Before sharing the form with customers:
 
@@ -25,7 +25,7 @@ Before sharing the form with customers:
 2. Check the inbox that receives mail forwarded from `contact@pondviewpb.com`, including spam. Open the FormSubmit activation email and confirm the address.
 3. Submit another test inquiry and confirm that it arrives. Delivery is not verified until this step succeeds.
 
-The form includes name, email, contact reason, and message, a honeypot, and the provider's default spam verification. FormSubmit processes these fields; a notice appears beside the form. After a successful submission, the provider redirects the visitor to this site's `/thank-you/` page. FormSubmit is an external service; delivery and availability depend on that service and the recipient's mail routing.
+The form includes name, email, contact reason, and message, a honeypot, and the provider's default spam verification. FormSubmit processes these fields. The contact reasons are Media Inquiry, Donation / Sponsorship Request, Partnership, Questions, and Concerns. After a successful submission, the provider redirects the visitor to this site's `/thank-you/` page. FormSubmit is an external service; delivery and availability depend on that service and the recipient's mail routing.
 
 Official setup and activation documentation: https://formsubmit.co/ and https://formsubmit.co/help
 
@@ -59,4 +59,6 @@ npm run preview
 
 ## Content still to confirm
 
-Locker availability, rental and lesson prices, and the exact court map pin remain placeholders. Supply the Instagram URL when it is ready. The certificate is the owner's supplied image and retains its watermark. Keep certification details and the linked image current when renewed.
+Locker availability and rental and lesson prices remain placeholders. Supply the Instagram URL when it is ready. The certificate is the owner's supplied image and retains its watermark. Keep certification details and the linked image current when renewed.
+
+The Reclub wordmark and peace-hand icon use official SVG shapes, tinted to the site palette with CSS masks. The footer uses icon-only social and mail links with accessible labels. The owner’s supplied club artwork is displayed at the bottom of the homepage.

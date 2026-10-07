@@ -22,3 +22,30 @@ svg{display:block;vertical-align:middle}body{margin:0}button,input{font:inherit}
 @media(max-width:1100px) and (min-width:1051px){.header{gap:12px;padding-inline:3%}.header nav{font-size:15px;gap:15px}.header .brand span{font-size:18px}.header-book{padding-inline:12px!important}}
 @media(max-width:1050px){.header nav .mobile-schedule{display:flex;align-items:center;gap:7px;justify-content:flex-start}.header .header-book{display:none}}
 @media(max-width:700px){.home-main .hero{min-height:580px}.home-main .hero-copy{padding-block:48px}.home-discover{padding-block:35px 45px}.discover-grid{grid-template-columns:1fr;gap:14px}.discover-card{padding:20px}.discover-card h2{font-size:25px}.discover-card p{margin-top:9px;max-width:none}.discover-card>svg{top:25px}.coach-page-grid{grid-template-columns:1fr;gap:28px}.coach-training{margin-top:35px}.booking-note{flex-direction:column;align-items:flex-start;margin-top:32px}.facility-faq,.area-map{margin-top:45px}.area-map{grid-template-columns:1fr;gap:24px}.area-map iframe{height:260px}.social-links{gap:20px}.social-links a,.social-placeholder{font-size:12px}.page-main .play-card{min-height:255px}.page-main .information-page>h1{margin-bottom:28px}}
+
+/* Shared brand sizing, aligned photography, and the home story. */
+.schedule-button{gap:9px}
+.reclub-wordmark{display:inline-block;width:5.66em;height:1.5em;flex-shrink:0;background:currentColor;-webkit-mask:url('/images/reclub-wordmark.svg') center/contain no-repeat;mask:url('/images/reclub-wordmark.svg') center/contain no-repeat}
+.reclub-hand{display:block;width:24px;height:28px;background:currentColor;-webkit-mask:url('/images/reclub-hand.svg') center/contain no-repeat;mask:url('/images/reclub-hand.svg') center/contain no-repeat}
+.social-links{gap:20px}
+.social-links a,.social-links .social-placeholder{width:44px;height:44px;justify-content:center;align-items:center;border:1px solid #d9b36535;border-radius:50%}
+.social-links a:hover{background:#d9b36512;border-color:var(--gold)}
+.social-links svg{width:24px;height:24px}
+.social-links .social-placeholder{opacity:.55}
+.coach-page-grid{align-items:start}
+.coach-photos{min-width:0}
+.coach-page-grid figure img{width:100%;height:auto}
+.coach-photos .coach-training{width:100%;max-width:none;margin:32px 0 0}
+.coach-bio{padding-top:8px}
+.home-story,.story-page-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:6%;align-items:center}
+.home-story{padding-block:20px 65px}
+.home-story h2{font-size:clamp(34px,3.5vw,48px);margin-bottom:24px}
+.home-story p:not(.eyebrow){color:var(--soft);font-size:16px}
+.story-photo img{width:100%;height:auto}
+.story-photo figcaption,.home-banner figcaption{font-size:13px;color:var(--soft);margin-top:10px}
+.story-page-grid{align-items:start}
+.story-page-grid .story{max-width:none}
+.home-banner{margin-bottom:65px}
+.home-banner img{width:100%;height:auto}
+.home-banner figcaption{text-align:right;font-size:11px;letter-spacing:.3px}
+@media(max-width:700px){.home-story,.story-page-grid{grid-template-columns:1fr;gap:28px}.home-story{padding-block:0 40px}.home-story h2{font-size:34px}.home-banner{margin-bottom:40px}.coach-photos{display:contents}.coach-photos>figure:first-child{grid-row:1}.coach-bio{grid-row:2;padding-top:0}.coach-photos .coach-training{grid-row:3;margin-top:0}.social-links{gap:14px}}
