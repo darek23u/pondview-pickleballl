@@ -19,6 +19,10 @@ For this apex domain, add pondviewpb.com as a website/zone on the same Cloudflar
 Once active, complete the Pages custom-domain setup. Add www.pondviewpb.com through Custom domains too if desired; follow the DNS instructions shown. Do not guess a pages.dev target.
 Official guide: https://developers.cloudflare.com/pages/configuration/custom-domains/
 
+## October 7 refinements
+
+Removed the first RPO badge from the hero while retaining coaching certification. Replaced shaded awning wording with Covered Courts. Removed the large visit section shown in the screenshot and changed its navigation link to Contact Us. Preserved the decorative palms.
+
 ## Included changes
 
 - Main scheduling links now point to Pondview Reclub.
@@ -32,7 +36,7 @@ Official guide: https://developers.cloudflare.com/pages/configuration/custom-dom
 
 ## Main email and contact form
 
-support@pondviewpb.com is the main public email in the footer, visit section, and contact page. The contact form opens an email draft addressed to support@pondviewpb.com with the visitor's name, email, reason, and message. Visitors must send it from their email app. No server-side form delivery is configured. contact@pondviewpb.com remains an alternate address but is not the main website contact.
+support@pondviewpb.com is the main public email in the footer and contact page. The contact form opens an email draft addressed to support@pondviewpb.com with the visitor's name, email, reason, and message. Visitors must send it from their email app. No server-side form delivery is configured. contact@pondviewpb.com remains an alternate address but is not the main website contact.
 
 ## Future source edits
 
