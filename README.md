@@ -1,49 +1,62 @@
-# Pondview website update
+# Pondview Pickleball website
 
-This package contains the source and a ready-built `dist` folder. No build is needed for the existing Cloudflare Pages setup.
+Source and a ready-built `dist` folder for https://pondviewpb.com. The site uses React, TypeScript, Vite, and CSS. GitHub stores the project; Cloudflare Pages publishes the committed build.
 
-## Publish using GitHub + Cloudflare Pages
+## Pages
 
-1. Extract the ZIP. Open the `pondview-github` folder.
-2. In your GitHub repository root, choose Add file > Upload files. Drag the contents of `pondview-github` into the upload area, including the WHOLE dist, src, public, and scripts folders. Do not upload the ZIP itself or flatten the folders. Commit the changes to your connected production branch.
-3. Confirm GitHub shows `dist/index.html`, `dist/assets/`, and `dist/about/index.html`.
-4. Keep Cloudflare Pages build command `exit 0`, build output directory `dist`, root directory blank. Keep SKIP_DEPENDENCY_INSTALL=true for this prebuilt workflow.
-5. Open the deployment triggered by the NEW commit. Retrying an older deployment may use old files.
+- `/` — compact homepage with the main scheduling link and page cards.
+- `/play/` — court rentals, open play, lessons and coaching.
+- `/coach/` — Coach Byron, RPO training photos, and certificate opening in a new tab.
+- `/facility/` — amenities, FAQs including lockers, and an Iba area map. The map is not an exact court pin.
+- `/about/` — our story.
+- `/contact/` — inquiry form.
+- `/code-of-conduct/` — club rules, with Safety first given priority.
+- `/thank-you/` — return page after a successful form submission.
 
-The current published version stays available while the new version is prepared. These local files are not automatically deployed by downloading this ZIP.
+Header sections use internal page links. Facebook, Reclub, the certificate, and other external links open in a new tab. Instagram remains a clearly labeled placeholder. Reclub is the court scheduler. The site keeps the round Pondview logo, dark and gold theme, mobile hamburger menu, and decorative palms.
 
-## Connect pondviewpb.com
+## Contact form: one-time activation required
 
-In Cloudflare: Workers & Pages > your Pages project > Custom domains > Set up a domain > enter pondviewpb.com.
-For this apex domain, add pondviewpb.com as a website/zone on the same Cloudflare account. If its DNS is not already on Cloudflare, change the nameservers at the company where you purchased it to the exact nameservers Cloudflare assigns. Check that existing DNS records, including any mail records, are copied before switching.
-Once active, complete the Pages custom-domain setup. Add www.pondviewpb.com through Custom domains too if desired; follow the DNS instructions shown. Do not guess a pages.dev target.
-Official guide: https://developers.cloudflare.com/pages/configuration/custom-domains/
+The Submit button sends the form to FormSubmit for email delivery to `contact@pondviewpb.com`. It does not open the visitor's email app. `support@pondviewpb.com` stays in the footer as the general support address.
 
-## October 7 refinements
+Before sharing the form with customers:
 
-Removed the first RPO badge from the hero while retaining coaching certification. Replaced shaded awning wording with Covered Courts. Removed the large visit section shown in the screenshot and changed its navigation link to Contact Us. Preserved the decorative palms.
+1. Open https://pondviewpb.com/contact/ and submit a test inquiry using an email address you control. Complete the provider's verification if requested.
+2. Check the inbox that receives mail forwarded from `contact@pondviewpb.com`, including spam. Open the FormSubmit activation email and confirm the address.
+3. Submit another test inquiry and confirm that it arrives. Delivery is not verified until this step succeeds.
 
-## Included changes
+The form includes name, email, contact reason, and message, a honeypot, and the provider's default spam verification. FormSubmit processes these fields; a notice appears beside the form. After a successful submission, the provider redirects the visitor to this site's `/thank-you/` page. FormSubmit is an external service; delivery and availability depend on that service and the recipient's mail routing.
 
-- Main scheduling links now point to Pondview Reclub.
-- Mobile navigation is collapsed into an accessible hamburger menu; desktop navigation is larger and uses Facility.
-- Round symbol-only Pondview logo retained. Enlarged RPO certification badge (the supplied source did not contain a separate official RPO logo file).
-- Toilet icon, half-round awning icon, and decorative gold palm outlines starting at 70% of the home-page content.
-- Play cards have titles without numbers. Footer location centered, Facebook link added.
-- About Us, Contact Us, and Code of Conduct pages, including direct URL refresh support.
-- Missing content photos display a themed placeholder.
-- Code of Conduct uses Pondview's name and links to the requested 2020 USA Pickleball skill-rating PDF.
+Official setup and activation documentation: https://formsubmit.co/ and https://formsubmit.co/help
 
-## Main email and contact form
+## Existing Cloudflare Pages settings
 
-support@pondviewpb.com is the main public email in the footer and contact page. The contact form opens an email draft addressed to support@pondviewpb.com with the visitor's name, email, reason, and message. Visitors must send it from their email app. No server-side form delivery is configured. contact@pondviewpb.com remains an alternate address but is not the main website contact.
+| Setting | Value |
+| --- | --- |
+| Production branch | `main` |
+| Root directory | Repository root (leave blank) |
+| Build command | `exit 0` |
+| Build output directory | `dist` |
+| Environment variable | `SKIP_DEPENDENCY_INSTALL=true` |
 
-## Future source edits
+Because this setup publishes prebuilt files, always commit the updated `dist` folder along with source changes. Editing `src` alone does not update the live site. Push to the connected production branch and check the Cloudflare Pages deployment for that new commit.
 
-Use Node 22.12 or newer. Run npm install, then npm run build. Upload the newly generated dist folder along with changed source files. If you retain build command exit 0 on Cloudflare, editing src alone will NOT update the live website; dist must also be rebuilt and committed.
+## Local development and future edits
 
-The bundled build script creates /about/, /contact/, and /code-of-conduct/ pages. This package targets a root domain or Cloudflare pages.dev hostname (not a GitHub Pages repository subpath).
+Use Node 22.12 or newer:
 
-## Verification
+```sh
+npm install
+npm run dev
+npx tsc --noEmit
+npm run build
+npm run preview
+```
 
-TypeScript checking and production build passed. Static page URLs and local asset references were checked. Browser visual testing was unavailable in this workspace; check mobile menu, pages, Facebook/Reclub links, and the contact email action on your preview before sharing the update.
+`src/App.tsx` holds the homepage and route selection. `src/Pages.tsx` holds the other pages. `src/UI.tsx` holds the shared navigation, footer, icons, and scheduling links. Styles are in `src/styles.css`; original assets are in `public/images/`.
+
+`scripts/postbuild.mjs` creates a directory index for each internal page so direct links and refreshes work with the static deployment. The project targets a root domain or Cloudflare Pages hostname, not a GitHub Pages repository subpath.
+
+## Content still to confirm
+
+Locker availability, rental and lesson prices, and the exact court map pin remain placeholders. Supply the Instagram URL when it is ready. The certificate is the owner's supplied image and retains its watermark. Keep certification details and the linked image current when renewed.
