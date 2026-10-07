@@ -25,7 +25,8 @@ svg{display:block;vertical-align:middle}body{margin:0}button,input{font:inherit}
 
 /* Shared brand sizing, aligned photography, and the home story. */
 .schedule-button{gap:9px}
-.reclub-wordmark{display:inline-block;width:5.66em;height:1.5em;flex-shrink:0;background:currentColor;-webkit-mask:url('/images/reclub-wordmark.svg') center/contain no-repeat;mask:url('/images/reclub-wordmark.svg') center/contain no-repeat}
+.button.schedule-button{font-size:16px}
+.reclub-wordmark{display:inline-block;width:5em;height:1.325em;flex-shrink:0;background:currentColor;-webkit-mask:url('/images/reclub-wordmark.svg') center/contain no-repeat;mask:url('/images/reclub-wordmark.svg') center/contain no-repeat}
 .reclub-hand{display:block;width:24px;height:28px;background:currentColor;-webkit-mask:url('/images/reclub-hand.svg') center/contain no-repeat;mask:url('/images/reclub-hand.svg') center/contain no-repeat}
 .social-links{gap:20px}
 .social-links a,.social-links .social-placeholder{width:44px;height:44px;justify-content:center;align-items:center;border:1px solid #d9b36535;border-radius:50%}
@@ -48,4 +49,5 @@ svg{display:block;vertical-align:middle}body{margin:0}button,input{font:inherit}
 .home-banner{margin-bottom:65px}
 .home-banner img{width:100%;height:auto}
 .home-banner figcaption{text-align:right;font-size:11px;letter-spacing:.3px}
+@media(min-width:1051px){.header nav{font-size:20px;gap:24px}}
 @media(max-width:700px){.home-story,.story-page-grid{grid-template-columns:1fr;gap:28px}.home-story{padding-block:0 40px}.home-story h2{font-size:34px}.home-banner{margin-bottom:40px}.coach-photos{display:contents}.coach-photos>figure:first-child{grid-row:1}.coach-bio{grid-row:2;padding-top:0}.coach-photos .coach-training{grid-row:3;margin-top:0}.social-links{gap:14px}}
