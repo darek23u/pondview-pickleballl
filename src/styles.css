@@ -25,8 +25,8 @@ svg{display:block;vertical-align:middle}body{margin:0}button,input{font:inherit}
 
 /* Shared brand sizing, aligned photography, and the home story. */
 .schedule-button{gap:9px}
-.button.schedule-button{font-size:16px}.reclub-wordmark{width:4.6em;height:1.2em}
-.reclub-wordmark{display:inline-block;width:4.6em;height:1.2em;flex-shrink:0;vertical-align:middle;transform:translateY(1px);background:currentColor;-webkit-mask:url('/images/reclub-wordmark.svg') center/contain no-repeat;mask:url('/images/reclub-wordmark.svg') center/contain no-repeat}
+.button.schedule-button{font-size:16px}.reclub-wordmark{width:4.9em;height:1.28em}
+.reclub-wordmark{display:inline-block;width:4.9em;height:1.28em;flex-shrink:0;vertical-align:middle;transform:translateY(-2px);background:currentColor;-webkit-mask:url('/images/reclub-wordmark.svg') center/contain no-repeat;mask:url('/images/reclub-wordmark.svg') center/contain no-repeat}
 .reclub-hand{display:block;width:24px;height:28px;background:currentColor;-webkit-mask:url('/images/reclub-hand.svg') center/contain no-repeat;mask:url('/images/reclub-hand.svg') center/contain no-repeat}
 .social-links{gap:20px}
 .social-links a,.social-links .social-placeholder{width:44px;height:44px;justify-content:center;align-items:center;border:1px solid #d9b36535;border-radius:50%}
