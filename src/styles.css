@@ -68,15 +68,3 @@ a,button{transition:color .18s ease,background-color .18s ease,border-color .18s
 @media(max-width:700px){.coach-training-full{margin-top:32px}.coach-page-grid{align-items:stretch}}
 @media(prefers-reduced-motion:reduce){a,button,.discover-card{transition:none!important;transform:none!important}}
 
-/* Give desktop pages a little more image width while keeping the content compact. */
-@media(min-width:1200px){
- .wrap{width:min(1360px,92%)}
- h1{font-size:clamp(60px,6.2vw,94px)}
- h2{font-size:clamp(34px,3.5vw,48px)}
- .section{padding-block:82px}
- .information-page{padding-block:64px 82px}
- .information-page h1{font-size:clamp(42px,5vw,70px)}
- .home-main .hero{min-height:580px}
- .home-main .hero-copy{padding-block:48px}
- .home-discover{padding-block:45px 58px}
-}
