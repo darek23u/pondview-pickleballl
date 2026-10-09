@@ -33,8 +33,9 @@ function Coach(){return <>
  <div className="coach-page-grid">
   <figure><Photo src="/images/byron-training.png" width={1364} height={1365} alt="Coach Byron in a white shirt and blue cap, holding a paddle and ball at RPO training"/></figure>
   <div className="coach-bio">
-   <p className="coach-achievement"><Award size={21} aria-hidden="true"/><span>UAAP Table Tennis Silver Medalist</span></p>
+   <p className="coach-achievement"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx={12} cy={8} r={6}/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg><span>UAAP Table Tennis Silver Medalist</span></p>
    <p className="page-intro">Byron brought his college table tennis skills into professional pickleball.</p>
+   <p>Byron has been playing table tennis since elementary school.</p>
    <div className="certification"><Award size={76}/><div><strong>RPO Pickleball</strong><span>Level 1 Certified</span></div></div>
    <p>A UAAP table tennis silver medalist, Byron John Abuiza developed his game in college before bringing those skills into professional pickleball coaching.</p>
    <p>His background in timing, spin, and quick reactions shapes how he approaches the game. At Pondview, he pairs that experience with his RPO Pickleball Level 1 certification to help players build a strong foundation.</p>
